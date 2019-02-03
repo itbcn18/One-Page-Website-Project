@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Romina Rua / One Page Website / Proyecto personal -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>One Page Website</title>
+</head>
+
+<body>
+
+    <header>
+        <!--  Contendrá el menú de navegación y enlace del "Modal"  -->
+
+        <nav>
+            <ul>
+                <li><a href="#weather">Weather</a></li>
+                <li><a href="#drumKit">Drum Kit</a></li>
+                <li><a href="#photoDesign">Photo Design</a></li>
+            </ul>
+        </nav>
+
+        <a href="#openModal" title="Info"><i class="fas fa-info" id="infoBtn"></i></a>
+
+    </header>
+
+
+
+    <!--  Modal con Información sobre la página-->
+
+    <div id="openModal" class="modalDialog">
+        <a href="#close" title="Close" class="close">X</a>
+
+        <div>
+
+            <h2>Acerca de </h2>
+
+            <p>Proyecto de maquetado de una web de estilo <b><em>"One Page Website"</em></b>, sobre una serie de
+                "Gadgets" interactivos,
+                realizado puramente en <b>HTML5, CSS3, JAVASCRIPT (ES6)</b>, sin el uso de frameworks. Esta página no
+                es "responsive", no
+                se pretende mostrar ese aspecto en ella. De igual forma algunas de las funcionalidades de la web no
+                están soportadas todavía
+                por los navegadores <b><a href="https://www.microsoft.com/es-es/download/internet-explorer.aspx" target="_blank">"Internet
+                        Explorer"</a></b>
+                y <b><a href="https://www.apple.com/es/safari/" target="_blank">"Safari"</a></b>.
+                En <b><a href="https://www.google.com/chrome/" target="_blank">"Google Chrome"</a></b> y <b><a href="https://www.mozilla.org/es-ES/firefox/"
+                        target="_blank">"Firefox"</a></b>
+                se puede visualizar correctamente.</p>
+
+            <p>Esta web contiene una barra de navegación y 4 secciones:</p>
+
+            <h3>Barra de navegación (Menú)</h3>
+
+            <p>En la barra de navegación se muestran los links de acceso a las secciones de tipo "Gadget" que posee la
+                web. Estos se
+                subrayan/destacan cada vez que se accede a su correspondiente sección con el mouse (No funciona en web
+                responsive).</p>
+            <p> Este efecto de navegación está construido con HTML5, CSS3 y Javascript. En la barra también está el
+                ícono de
+                "información" el cual al clicar abrirá una ventana modal con texto dentro realizada con CSS3.</p>
+
+            <h3>Secciones:</h3>
+
+            <p><b>La primera sección</b> es a modo de presentación de la web. Construido en HTML5 y CSS3, muestra un
+                efecto
+                "Parallax" y un efecto "Spotlight" sobre una imagen de fondo. </p>
+
+            <p><b>La segunda sección</b> es un Gadget Metereológico "Weather app", informa sobre el tiempo según la
+                latitud y longitud
+                del "timezone" del usuario. Se puede clicar sobre la temperatura para cambiar a grados Centígrados. Se
+                usó HTML,
+                CSS3, Javascript (eventListeners, objeto de geolocalización "navigator.geolocation", textcontent) y una
+                API (Darksky) para
+                obtener toda la información necesaria del tiempo. </p>
+
+            <p><b>La tercera sección</b> es un "Drum Kit", un kit de batería para interactuar usando el teclado.
+                Utilizando HTML5,
+                CSS3 y "eventListeners, querySelectors" en Javascript. </p>
+
+            <p><b>La cuarta y última sección</b> muestra un Slider de imágenes con diferentes efectos "Hover",
+                realizado en HTML5 y CSS3.</p>
+
+            <p>Esta One page Website posee un botón para hacer Scroll directo hacia el top de la web. Realizado en HTML5,
+                CSS3 y
+                Javascript (eventListeners, eventHandlers).</p>
+
+            <p><b>Nota:</b> En los ficheros <em>.js</em> se detalla un poco la lógica del código. </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!--  Sección del Parallax  -->
+
+    <section class="presentation">
+
+        <div class="parallax">
+            <h1>ONE PAGE WEBSITE</h1>
+            <h2>Click the Information icon to know more </h2>
+            <h2>HTML | CSS | JAVASCRIPT ES6</h2>
+        </div>
+
+    </section>
+
+
+    <!-- ========================================================================= -->
+
+    <!--  Sección de WEATHER  -->
+
+    <section id="weather">
+
+        <div class="location">
+            <h2 class="location-timezone">Timezone</h2>
+            <canvas class="icon" width="128" height="128"></canvas>
+        </div>
+
+        <div class="temperature">
+
+            <div class="degree-section">
+                <h2 class="temperature-degree">1</h2>
+                <span>F</span>
+            </div>
+
+            <div class="temperature-description">Frozen!</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================================================================= -->
+
+    <!--  Sección del DRUM KIT -->
+
+    <section id="drumKit">
+
+        <div class="keys">
+
+            <div data-key="65" class="key">
+                <kbd>A</kbd>
+                <span class="sound">clap</span>
+            </div>
+
+            <div data-key="83" class="key">
+                <kbd>S</kbd>
+                <span class="sound">hihat</span>
+            </div>
+
+            <div data-key="68" class="key">
+                <kbd>D</kbd>
+                <span class="sound">kick</span>
+            </div>
+
+            <div data-key="70" class="key">
+                <kbd>F</kbd>
+                <span class="sound">openhat</span>
+            </div>
+
+        </div>
+
+        <audio data-key="65" src="Samples/clap-808.wav"></audio>
+        <audio data-key="83" src="Samples/hihat-808.wav"></audio>
+        <audio data-key="68" src="Samples/kick-808.wav"></audio>
+        <audio data-key="70" src="Samples/openhat-808.wav"></audio>
+
+    </section>
+
+
+    <!-- ========================================================================= -->
+
+    <!--  Sección del SLIDER PHOTO DESIGN -->
+
+
+    <section id="photoDesign">
+
+        <div class="container">
+
+            <ul class="slides">
+
+                <li id="slide1">
+                    <img src="images/purpurina_blue.jpg" alt="Colorful Textures" />
+                    <img class="transition-image" src="images/purpurina_blue_pink.jpg" alt="Colorful Textures">
+                </li>
+
+                <li id="slide2" class="fade">
+                    <img src="images/lavender_wall.jpg" alt="Lavender Wall" />
+                </li>
+
+                <li id="slide3" class="grayScale"><img src="images/liquid_indigo.jpg" alt="Liquid Indigo Texture" /></li>
+
+                <li id="slide4">
+                    <span>
+                        <p>Something Here</p>
+                        <a href="#slide1" id="slideButton">More</a>
+                    </span>
+                    <img src="images/beach_texture.jpg" alt="Beach Textures" />
+                </li>
+
+            </ul>
+
+
+            <!--  Fotos laterales  -->
+
+            <ul class="thumbnails">
+                <li>
+                    <a href="#slide1"><img src="images/purpurina_blue.jpg" alt="Colorful Textures" /></a>
+                </li>
+                <li>
+                    <a href="#slide2"><img src="images/lavender_wall.jpg" alt="Lavender Wall" /></a>
+                </li>
+                <li>
+                    <a href="#slide3"><img src="images/liquid_indigo.jpg" alt="Liquid Indigo Texture" /></a>
+                </li>
+                <li>
+                    <a href="#slide4"><img src="images/beach_texture.jpg" alt="Beach Textures" /></a>
+                </li>
+            </ul>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+
+    <!--  Botón de Scroll Top automático  -->
+
+    <button id="scrollBtn">Top</button>
+
+
+
+    <!--  SCRIPTS  -->
+
+    <script type="text/javascript" src="menu-nav.js"></script>
+    <script type="text/javascript" src="skycons.js"></script>
+    <script type="text/javascript" src="weatherApp.js"></script>
+    <script type="text/javascript" src="drumKit.js"></script>
+    <script type="text/javascript" src="scroll-button.js"></script>
+    <script type="text/javascript" src="slider.js"></script>
+
+</body>
+
+</html>
